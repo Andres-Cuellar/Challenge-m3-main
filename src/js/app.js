@@ -28,9 +28,10 @@ bodyContainer.addEventListener("click", (e) => {
   filterColor(e);
   filterSize(e);
   filterPrice(e);
+  resetearFiltro(e);
 });
 
-export function cargarProductos(productos) {
+function cargarProductos(productos) {
   productos.forEach((producto) => {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("producto");
@@ -110,18 +111,11 @@ function agregarCarrito(e) {
 
 function filterColor(e) {
   if (e.target.classList.contains("check")) {
-    // console.log("filtra por color: ", e.target.id);
-    const resFilterColor = productos.filter(() => {
-      if (e.target.id) {
-        console.log('paso por primer if');
-        console.log(productos.color);
-        return productos.color === e.target.id;
-      }
-      console.log('retorna producto');
-      return productos;
+    const filtro = productos.filter((producto) => {
+      return producto.color === e.target.id;
     });
-
-    console.log(productos);
+    limpiarHTML();
+    cargarProductos(filtro);
   }
 }
 
@@ -136,5 +130,18 @@ function filterSize(e) {
 function filterPrice(e) {
   if (e.target.classList.contains("price")) {
     console.log("filtra por precio: ", e.target.id);
+  }
+}
+
+function limpiarHTML() {
+  while (productoCard.firstChild) {
+    productoCard.removeChild(productoCard.firstChild);
+  }
+}
+
+function resetearFiltro(e) {
+  if (e.target.classList.contains("filterBtn")) {
+    limpiarHTML();
+    cargarProductos(productos);
   }
 }
