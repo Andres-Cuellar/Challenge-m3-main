@@ -1,0 +1,260 @@
+@import "reset";
+// @import "grid";
+@import "breakpoints";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+}
+
+.header {
+  height: 64px;
+}
+
+#logo {
+  width: 119px;
+  height: 30px;
+}
+
+#carrito {
+  width: 17px;
+  height: 20px;
+}
+
+#img-carrito {
+  width: 17px;
+  height: 20px;
+}
+
+.titulo {
+  width: 97px;
+  height: 44px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+
+  color: #333333;
+}
+
+.orderby {
+  display: grid;
+  width: 142px;
+  height: 42px;
+
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  align-self: start;
+
+  //opciones de fuente
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.header-container {
+  padding-bottom: 10px;
+  margin-top: 16px;
+  max-width: 1500px;
+  margin-left: 20vh;
+  align-content: center;
+  display: grid;
+  grid-template-columns: 78% 22%;
+}
+
+.header-container div {
+  text-align: start;
+}
+
+.header-container hr {
+  color: #c7c7c7;
+}
+
+.title-container {
+  margin-top: 16px;
+  margin-left: 20vh;
+  margin-right: 20vh;
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.body-container {
+  margin-top: 16px;
+  max-width: 1500px;
+  margin-left: 20vh;
+  margin-right: 20vh;
+  display: grid;
+  grid-template-columns: 15% 80%;
+}
+
+.talla-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.talla {
+  margin: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.producto {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.producto button {
+  background-color: black;
+  color: white;
+  width: 60%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: 700;
+  margin-top: 10px;
+  border: none;
+}
+
+.filterBtn{
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: 700;
+  margin-top: 10px;
+  border: none;
+}
+
+.title-product {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.price-product {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cuotas-product {
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+#idFiltros {
+  display: none;
+}
+
+#idFiltroColor,
+#idFiltroTallas,
+#idRandoPrecios {
+  display: inline;
+}
+
+@media (max-width: 1200px) {
+  .body-container {
+    margin-top: 16px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    display: grid;
+  }
+}
+
+@media (max-width: 900px) {
+  .body-container {
+    margin-top: 16px;
+    margin-right: -5vh;
+    margin-left: 5vh;
+    display: grid;
+    grid-template-columns: 20% 70%;
+  }
+  .productos-grid {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .body-container {
+    margin-top: 16px;
+    margin-right: -5vh;
+    margin-left: 1vh;
+    display: grid;
+    grid-template-columns: 20% 70%;
+  }
+
+  .productos-grid {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  #idOrderBy {
+    display: none;
+  }
+
+  .header-container {
+    padding-bottom: 7px;
+    max-width: 576px;
+    margin-top: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 78% 22%;
+  }
+
+  .header-container div {
+    text-align: start;
+  }
+
+  .title-container {
+    text-align: center;
+    max-width: 576px;
+    margin-top: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 50%;
+  }
+
+  #idTitle {
+    align-items: center;
+  }
+
+  .body-container {
+    max-width: 576px;
+    margin-top: 16px;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  #idFiltroColor,
+  #idFiltroTallas,
+  #idRandoPrecios,
+  #idFilterBtn {
+    display: none;
+  }
+
+  #idFiltros {
+    display: block;
+  }
+
+  .productos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,1 @@
+import { cargarProductos } from "./app";

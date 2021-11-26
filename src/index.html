@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvedor M3</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="header-container">
+        <div class="logo">
+          <img src="img/logo-m3.png" id="logo" />
+        </div>
+        <div>
+          <ul>
+            <li class="cart">
+              <img src="img/cart.png" id="img-carrito" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </header>
+   
+    <div class="title-container">
+      <!-- titulo y ordenar -->      
+        <div>
+          <p  id="idTitle" class="titulo">Blusas</p>
+        </div>        
+        <div >
+          <select class="orderby" name="orderby" id="idOrderBy">
+            <option value="0">Ordenar por:</option>
+          </select>
+        </div>
+    </div>
+
+      <br /> 
+      <div class="body-container">        
+          <!-- sidebar -->
+          <div>
+            <div id="idFiltroColor">
+              <h1>Colores</h1>
+              <br />
+              <ul id="filtroColor">
+                <li> <input type="checkbox" onclick="if(this.checked){myFunction()}"/> Amarillo </li>                
+              </ul>
+            </div>
+            <br />
+            <div id="idFiltroTallas">
+              <h1>Tallas</h1>
+              <br>
+              <div id="filtroTalla" class="talla-container">
+               
+              </div>
+            </div>
+            <br>
+            <div id="idRandoPrecios">
+              <h1>Rango de precios</h1>
+              <br>
+              <ul>
+                <li>
+                  <input type="checkbox"  class="price" id="1"/>de R$0 a R$50
+                </li>
+                <li>
+                  <input type="checkbox"  class="price" id="2"/>de R$51 a R$150
+                </li>
+                <li>
+                  <input type="checkbox"  class="price" id="3"/>de R$151 a R$300
+                </li>
+                <li>
+                  <input type="checkbox"  class="price" id="4"/>de R$301 a R$500
+                </li>
+                <li>
+                  <input type="checkbox"  class="price" id="5"/>a partir de R$500
+                </li>
+              </ul>
+          </div>
+          <br>
+          <button id="idFilterBtn" class="filterBtn">LIMPIAR FILTRO</button>
+          </div>
+          <!-- productos -->         
+
+          <div id="producto" class="productos-grid">
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="bundle.js"></script>
+</html>
